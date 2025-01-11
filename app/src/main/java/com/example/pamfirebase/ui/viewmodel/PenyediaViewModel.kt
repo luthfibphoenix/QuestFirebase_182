@@ -9,7 +9,7 @@ import com.example.pamfirebase.MahasiswaApplications
 object PenyediaViewModel {
     val Factory = viewModelFactory {
         initializer { HomeViewModel(AplikasiMahasiswa().container.mahasiswaRepository) }
-        //initializer { InsertViewModel(AplikasiMahasiswa().container.mahasiswaRepository) }
+        initializer { InsertViewModel(AplikasiMahasiswa().container.mahasiswaRepository) }
         //initializer { DetailViewModel(createSavedStateHandle(),AplikasiMahasiswa().container.mahasiswaRepository) }
         //initializer { UpdateViewModel(createSavedStateHandle(),AplikasiMahasiswa().container.mahasiswaRepository) }
     }
