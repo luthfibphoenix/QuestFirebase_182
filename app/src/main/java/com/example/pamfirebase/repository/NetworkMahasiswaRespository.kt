@@ -37,6 +37,9 @@ class NetworkMahasiswaRespository (
                     trySend(mhs)
                 }
             }
+        awaitClose {
+            mhsDocument.remove()
+        }
     }
 
     override suspend fun insertMahasiswa(mahasiswa: Mahasiswa) {
