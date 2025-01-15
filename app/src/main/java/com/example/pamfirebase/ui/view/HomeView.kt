@@ -179,6 +179,10 @@ fun MhsCard(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
+            Text(
+                text = mahasiswa.judul_skripsi,
+                style = MaterialTheme.typography.titleMedium
+            )
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
@@ -188,25 +192,20 @@ fun MhsCard(
                     style = MaterialTheme.typography.titleLarge
                 )
                 Spacer(Modifier.weight(1f))
-                IconButton(onClick = {onDeleteClick(mahasiswa.nim)}) {
+                IconButton(onClick = {onDeleteClick(mahasiswa.nama)}) {
                     Icon(
                         imageVector = Icons.Default.Delete,
                         contentDescription = null,
                     )
                 }
-
-                Text(
-                    text = mahasiswa.nim,
-                    style = MaterialTheme.typography.titleMedium
-                )
             }
+            Text(
+                text = mahasiswa.nim,
+                style = MaterialTheme.typography.titleMedium
+            )
 
             Text(
                 text = mahasiswa.kelas,
-                style = MaterialTheme.typography.titleMedium
-            )
-            Text(
-                text = mahasiswa.alamat,
                 style = MaterialTheme.typography.titleMedium
             )
         }
